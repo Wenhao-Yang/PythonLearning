@@ -3,7 +3,7 @@
 @author: yangwenhao
 @contact: 874681044@qq.com
 @software: PyCharm
-@file: 2.2_binaryclassification.py
+@file: 2.2_BinaryClassification.py
 @time: 2018/12/6 下午5:32
 @overview: This is an example of linear regression: y = Ax. X cound be get from N(1, 0.1) and Y=10. So the A is supposed to be 10.
 '''
