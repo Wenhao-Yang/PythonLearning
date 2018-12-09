@@ -5,9 +5,9 @@
 @author: yangwenhao
 @contact: 874681044@qq.com
 @software: PyCharm
-@file: 2.3BatchAndStochastic.py
+@file: 2.3_BatchAndStochastic.py
 @time: 2018/12/6 下午8:31
-@overview:Extend the pror regression example using stochastic training to batch training
+@overview:Extend the prior regression example using stochastic training to batch training
 
 """
 import matplotlib.pyplot as plt

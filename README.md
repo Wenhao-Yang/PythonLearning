@@ -1,5 +1,5 @@
 # TensorflowML
-All examples of python are from 《**Tensorflow machine learning cookbook**》.
+All examples of python are from 《**TensorFlow Machine Learning Cookbook**》.
 ## Chapter 1: Getting Started with TensorFlow
 
 * Declaring Tensors
@@ -15,3 +15,5 @@ All examples of python are from 《**Tensorflow machine learning cookbook**》.
 * Implementing **Loss Functions**
 * Implementing **Back Propagation**
 * Working with **Batch and Stochastic Training** 
+* Combining Everything Together
+* **Evaluating Models** 
