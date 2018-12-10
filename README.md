@@ -17,3 +17,10 @@ All examples of python are from 《**TensorFlow Machine Learning Cookbook**》.
 * Working with **Batch and Stochastic Training** 
 * Combining Everything Together
 * **Evaluating Models** 
+
+## Chapter 3: Linear Regression
+* Using the **matrix inverse method**
+When *Ax=b*,the solution to solving *x* can be expressed as *x=(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup>b*.
+The plot image that the linear regression produces will be:
+![MatrixInverseMethod](image/MatrixInverseMethod.png) 
+
