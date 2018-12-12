@@ -47,9 +47,10 @@ And the following image shows the result.
 
 * The TensorFlow Way of Linear Regression  
 
-Loop through batches of data points and let TensorFlow update the slopes and y-intercept. We will find an optional line through data points where the x-value is the petal width and the y-value is the sepal length. In the end, we plot the best fit line and data points image. And we plot the L2 loss vs generation iamge.  
+Loop through batches of data points and let TensorFlow update the slopes and y-intercept. We will find an optional line through data points where the x-value is the petal width and the y-value is the sepal length. In the end, we plot the best fit line and data points image. And we plot the L2 loss vs generation image.  
 
-Here are the images.
+Here are the images.  
+
 ![SepalLength&PedalWidth](image/SepalLength&PedalWidth.png)  
 
 ![L2Loss&Generation](image/L2Loss&Generation.png)
