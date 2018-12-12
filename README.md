@@ -43,7 +43,15 @@ We implement a matrix decomposition method for linear method. Implementing inver
 
 And the following image shows the result.  
 
-![CholeskyDecompositionMethod](image/CholeskyDecompositionMethod.png)
+![CholeskyDecompositionMethod](image/CholeskyDecompositionMethod.png)  
 
+* The TensorFlow Way of Linear Regression  
+
+Loop through batches of data points and let TensorFlow update the slopes and y-intercept. We will find an optional line through data points where the x-value is the petal width and the y-value is the sepal length. In the end, we plot the best fit line and data points image. And we plot the L2 loss vs generation iamge.  
+
+Here are the images.
+![SepalLength&PedalWidth](image/SepalLength&PedalWidth.png)  
+
+![L2Loss&Generation](image/L2Loss&Generation.png)
 
 
