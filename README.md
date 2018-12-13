@@ -53,6 +53,16 @@ Here are the images.
 
 ![SepalLength&PedalWidth](image/SepalLength&PedalWidth.png)  
 
-![L2Loss&Generation](image/L2Loss&Generation.png)
+![L2Loss&Generation](image/L2Loss&Generation.png)  
 
+* Understanding Loss Function in Linear Regression  
 
+We use the same irirs dataset as in the prior recipe, but we will change our loss functions and learning rates to see how convergence changes.
+
+When the learning rate is 0.1, the loss values will change with following trend:  
+
+![0.1rate&LossFunctionL1&L2](image/0.1rate&LossFunctionL1&L2.png)  
+
+However, when the learning rate is 0.4, the model will not converge:   
+
+![0.4rate&LossFunctionL1&L2](image/0.4rate&LossFunctionL1&L2.png)  
