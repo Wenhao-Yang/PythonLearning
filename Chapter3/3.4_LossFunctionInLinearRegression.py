@@ -24,7 +24,7 @@ x_vals = np.array([x[3] for x in iris.data])
 y_vals = np.array([y[0] for y in iris.data])
 
 #Declare the learning rate, batch size, placeholders, and variables
-learning_rate = 0.4
+learning_rate = 0.1
 batch_size = 25
 iterations = 50
 x_data = tf.placeholder(shape=[None, 1], dtype=tf.float32)
@@ -79,6 +79,6 @@ plt.plot(loss_vec_l1, 'k-', label='L1 Loss')
 plt.plot(loss_vec_l2, 'r--', label='L2 Loss')
 plt.title('L1 and L2 Loss per Generation')
 plt.xlabel('Generation')
-plt.ylabel('L1 Loss')
+plt.ylabel('Loss Value')
 plt.legend(loc='upper right')
 plt.show()
