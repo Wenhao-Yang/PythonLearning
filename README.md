@@ -65,4 +65,12 @@ When the learning rate is 0.1, the loss values will change with following trend:
 
 However, when the learning rate is 0.4, the model will not converge:   
 
-![0.4rate&LossFunctionL1&L2](image/0.4rate&LossFunctionL1&L2.png)  
+![0.4rate&LossFunctionL1&L2](image/0.4rate&LossFunctionL1&L2.png)   
+
+* Implement Deming regression
+
+In the recipe, we will implement Deming regression, which means we will need a different way to measure the distance between the model line and data points.  
+
+Here are the results:  
+
+![DemingRegression](image/DemingRegression.png)
