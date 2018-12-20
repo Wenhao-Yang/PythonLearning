@@ -40,10 +40,17 @@ b = tf.Variable(tf.random_normal(shape=[1, 1]))
 model_output = tf.add(tf.matmul(x_data, A), b)
 
 # Add the loss function, which is a modified continuous heavyside step function. We also set the cutoff for lasso regression at 0.9. This means that we want to restrict the slope coefficient to be less that 0.9.
+"""
 lasso_param = tf.constant(0.9)
 heavyside_step = tf.truediv(1., tf.add(1., tf.exp(tf.multiply(-100., tf.subtract(A, lasso_param)))))
 regularization_param = tf.multiply(heavyside_step, 99.)
 loss = tf.add(tf.reduce_mean(tf.square(y_target - model_output)), regularization_param)
+"""
+
+# For the ridge regression
+ridge_param = tf.constant(1.)
+ridge_loss = tf.reduce_mean(tf.square(A))
+loss = tf.expand_dims(tf.add(tf.reduce_mean(tf.square(y_target - model_output)), tf.multiply(ridge_param, ridge_loss)), 0)
 
 # Initialize the variables, declare the optmizer, and loop through training part
 init = tf.global_variables_initializer()
@@ -71,16 +78,16 @@ best_fit = []
 for i in x_vals:
     best_fit.append(slope*i + y_intercept)
 
-plt.plot(x_vals, y_vals, 'o', label='Data Points')
+plt.plot(x_vals, y_vals, 'o')
 plt.plot(x_vals, best_fit, 'r-', label='Best fit lines', linewidth=3)
 plt.legend(loc='upper left')
-plt.title('Sepal Length vs Pedal Width of Lasso Regression')
+plt.title('Sepal Length vs Pedal Width of Ridge Regression')
 plt.xlabel('Pedal Width')
 plt.ylabel('Sepal Length')
 plt.show()
 
-plt.plot(loss_vec, 'k-', label='L1 Loss')
-plt.title('Lasso Loss per Generation')
+plt.plot(loss_vec, 'k-')
+plt.title('Ridge Loss per Generation')
 plt.xlabel('Generation')
 plt.ylabel('Loss Value')
 plt.legend(loc='upper right')
