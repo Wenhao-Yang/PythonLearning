@@ -1,0 +1,176 @@
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   0.00%               833.3MiB / 3.906GiB   20.83%              2.45kB / 1.44kB     0B / 3.24MB         388
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   0.00%               833.3MiB / 3.906GiB   20.83%              2.45kB / 1.44kB     0B / 3.24MB         388
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   0.96%               833.2MiB / 3.906GiB   20.83%              2.45kB / 1.44kB     0B / 3.24MB         388
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   0.96%               833.2MiB / 3.906GiB   20.83%              2.45kB / 1.44kB     0B / 3.24MB         388
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   0.93%               833.2MiB / 3.906GiB   20.83%              2.45kB / 1.44kB     0B / 3.24MB         388
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   0.93%               833.2MiB / 3.906GiB   20.83%              2.45kB / 1.44kB     0B / 3.24MB         388
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   46.80%              872.9MiB / 3.906GiB   21.82%              2.45kB / 1.44kB     0B / 3.24MB         405
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   46.80%              872.9MiB / 3.906GiB   21.82%              2.45kB / 1.44kB     0B / 3.24MB         405
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   176.48%             965.8MiB / 3.906GiB   24.15%              2.45kB / 1.44kB     0B / 3.24MB         406
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   176.48%             965.8MiB / 3.906GiB   24.15%              2.45kB / 1.44kB     0B / 3.24MB         406
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   176.48%             965.8MiB / 3.906GiB   24.15%              2.45kB / 1.44kB     0B / 3.24MB         406
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT    MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   122.69%             1003MiB / 3.906GiB   25.08%              2.45kB / 1.44kB     0B / 3.26MB         408
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT    MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   122.69%             1003MiB / 3.906GiB   25.08%              2.45kB / 1.44kB     0B / 3.26MB         408
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   71.62%              1.009GiB / 3.906GiB   25.84%              2.45kB / 1.44kB     0B / 3.33MB         408
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   71.62%              1.009GiB / 3.906GiB   25.84%              2.45kB / 1.44kB     0B / 3.33MB         408
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   101.00%             1.102GiB / 3.906GiB   28.22%              2.45kB / 1.44kB     0B / 3.33MB         415
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   101.00%             1.102GiB / 3.906GiB   28.22%              2.45kB / 1.44kB     0B / 3.33MB         415
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT    MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   150.59%             1.17GiB / 3.906GiB   29.95%              2.45kB / 1.44kB     0B / 3.33MB         436
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT    MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   150.59%             1.17GiB / 3.906GiB   29.95%              2.45kB / 1.44kB     0B / 3.33MB         436
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   219.60%             1.248GiB / 3.906GiB   31.95%              2.45kB / 1.44kB     0B / 3.33MB         440
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   219.60%             1.248GiB / 3.906GiB   31.95%              2.45kB / 1.44kB     0B / 3.33MB         440
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   219.60%             1.248GiB / 3.906GiB   31.95%              2.45kB / 1.44kB     0B / 3.33MB         440
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   173.97%             1.286GiB / 3.906GiB   32.92%              2.45kB / 1.44kB     0B / 3.33MB         453
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   173.97%             1.286GiB / 3.906GiB   32.92%              2.45kB / 1.44kB     0B / 3.33MB         453
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   80.61%              1.342GiB / 3.906GiB   34.37%              2.45kB / 1.44kB     0B / 3.35MB         498
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   80.61%              1.342GiB / 3.906GiB   34.37%              2.45kB / 1.44kB     0B / 3.35MB         498
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   10.72%              1.343GiB / 3.906GiB   34.38%              2.45kB / 1.44kB     0B / 3.35MB         499
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   10.72%              1.343GiB / 3.906GiB   34.38%              2.45kB / 1.44kB     0B / 3.35MB         499
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   170.32%             1.423GiB / 3.906GiB   36.42%              2.45kB / 1.44kB     0B / 3.35MB         522
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   170.32%             1.423GiB / 3.906GiB   36.42%              2.45kB / 1.44kB     0B / 3.35MB         522
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   349.44%             1.565GiB / 3.906GiB   40.07%              2.45kB / 1.44kB     0B / 3.35MB         559
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   349.44%             1.565GiB / 3.906GiB   40.07%              2.45kB / 1.44kB     0B / 3.35MB         559
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   349.44%             1.565GiB / 3.906GiB   40.07%              2.45kB / 1.44kB     0B / 3.35MB         559
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   381.67%             1.562GiB / 3.906GiB   40.00%              2.45kB / 1.44kB     0B / 3.36MB         569
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   381.67%             1.562GiB / 3.906GiB   40.00%              2.45kB / 1.44kB     0B / 3.36MB         569
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   378.03%             1.536GiB / 3.906GiB   39.33%              2.45kB / 1.44kB     0B / 3.36MB         579
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   378.03%             1.536GiB / 3.906GiB   39.33%              2.45kB / 1.44kB     0B / 3.36MB         579
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   396.92%             1.698GiB / 3.906GiB   43.47%              2.45kB / 1.44kB     0B / 3.36MB         615
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   396.92%             1.698GiB / 3.906GiB   43.47%              2.45kB / 1.44kB     0B / 3.36MB         615
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   396.42%             1.739GiB / 3.906GiB   44.52%              2.45kB / 1.44kB     0B / 3.36MB         614
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   396.42%             1.739GiB / 3.906GiB   44.52%              2.45kB / 1.44kB     0B / 3.36MB         614
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   397.61%             1.948GiB / 3.906GiB   49.87%              2.45kB / 1.44kB     0B / 3.36MB         636
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   397.61%             1.948GiB / 3.906GiB   49.87%              2.45kB / 1.44kB     0B / 3.36MB         636
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   397.61%             1.948GiB / 3.906GiB   49.87%              2.45kB / 1.44kB     0B / 3.36MB         636
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   398.13%             1.809GiB / 3.906GiB   46.30%              2.45kB / 1.44kB     0B / 3.36MB         626
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   398.13%             1.809GiB / 3.906GiB   46.30%              2.45kB / 1.44kB     0B / 3.36MB         626
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   398.96%             1.912GiB / 3.906GiB   48.94%              2.45kB / 1.44kB     0B / 3.36MB         619
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   398.96%             1.912GiB / 3.906GiB   48.94%              2.45kB / 1.44kB     0B / 3.36MB         619
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   398.89%             1.681GiB / 3.906GiB   43.04%              2.45kB / 1.44kB     0B / 3.36MB         609
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   398.89%             1.681GiB / 3.906GiB   43.04%              2.45kB / 1.44kB     0B / 3.36MB         609
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   389.48%             1.885GiB / 3.906GiB   48.25%              2.45kB / 1.44kB     0B / 3.38MB         616
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   389.48%             1.885GiB / 3.906GiB   48.25%              2.45kB / 1.44kB     0B / 3.38MB         616
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   288.08%             1.585GiB / 3.906GiB   40.57%              2.45kB / 1.44kB     0B / 3.38MB         580
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   288.08%             1.585GiB / 3.906GiB   40.57%              2.45kB / 1.44kB     0B / 3.38MB         580
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   288.08%             1.585GiB / 3.906GiB   40.57%              2.45kB / 1.44kB     0B / 3.38MB         580
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   127.65%             1.488GiB / 3.906GiB   38.09%              2.45kB / 1.44kB     0B / 3.47MB         541
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   127.65%             1.488GiB / 3.906GiB   38.09%              2.45kB / 1.44kB     0B / 3.47MB         541
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   13.34%              1.367GiB / 3.906GiB   35.00%              2.45kB / 1.44kB     0B / 3.53MB         509
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   13.34%              1.367GiB / 3.906GiB   35.00%              2.45kB / 1.44kB     0B / 3.53MB         509
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   15.89%              1.373GiB / 3.906GiB   35.16%              2.45kB / 1.44kB     0B / 3.53MB         467
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   15.89%              1.373GiB / 3.906GiB   35.16%              2.45kB / 1.44kB     0B / 3.53MB         467
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   1.69%               1.218GiB / 3.906GiB   31.19%              2.45kB / 1.44kB     0B / 3.53MB         449
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   1.69%               1.218GiB / 3.906GiB   31.19%              2.45kB / 1.44kB     0B / 3.53MB         449
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   1.45%               1.218GiB / 3.906GiB   31.19%              2.45kB / 1.44kB     0B / 3.53MB         448
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   1.45%               1.218GiB / 3.906GiB   31.19%              2.45kB / 1.44kB     0B / 3.53MB         448
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   1.45%               1.218GiB / 3.906GiB   31.19%              2.45kB / 1.44kB     0B / 3.53MB         448
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   2.12%               1.218GiB / 3.906GiB   31.19%              2.45kB / 1.44kB     0B / 3.53MB         449
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT     MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   2.12%               1.218GiB / 3.906GiB   31.19%              2.45kB / 1.44kB     0B / 3.53MB         449
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT    MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   7.25%               1009MiB / 3.906GiB   25.21%              2.45kB / 1.44kB     0B / 3.53MB         414
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT    MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   7.25%               1009MiB / 3.906GiB   25.21%              2.45kB / 1.44kB     0B / 3.53MB         414
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT    MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   8.07%               1009MiB / 3.906GiB   25.22%              2.45kB / 1.44kB     0B / 3.53MB         416
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT    MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   8.07%               1009MiB / 3.906GiB   25.22%              2.45kB / 1.44kB     0B / 3.53MB         416
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT    MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   1.73%               1009MiB / 3.906GiB   25.22%              2.45kB / 1.44kB     0B / 3.53MB         416
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT    MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   1.73%               1009MiB / 3.906GiB   25.22%              2.45kB / 1.44kB     0B / 3.53MB         416
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT    MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   1.13%               1009MiB / 3.906GiB   25.21%              2.45kB / 1.44kB     0B / 3.53MB         416
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT    MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   1.13%               1009MiB / 3.906GiB   25.21%              2.45kB / 1.44kB     0B / 3.53MB         416
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT    MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   1.13%               1009MiB / 3.906GiB   25.21%              2.45kB / 1.44kB     0B / 3.53MB         416
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT    MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   1.28%               1009MiB / 3.906GiB   25.21%              2.45kB / 1.44kB     0B / 3.53MB         416
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT    MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   1.28%               1009MiB / 3.906GiB   25.21%              2.45kB / 1.44kB     0B / 3.53MB         416
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT    MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   1.03%               1009MiB / 3.906GiB   25.21%              2.45kB / 1.44kB     0B / 3.53MB         416
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT    MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   1.03%               1009MiB / 3.906GiB   25.21%              2.45kB / 1.44kB     0B / 3.53MB         416
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT    MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   1.11%               1009MiB / 3.906GiB   25.21%              2.45kB / 1.44kB     0B / 3.53MB         416
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT    MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   1.11%               1009MiB / 3.906GiB   25.21%              2.45kB / 1.44kB     0B / 3.53MB         416
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT    MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   1.31%               1009MiB / 3.906GiB   25.21%              2.45kB / 1.44kB     0B / 3.53MB         416
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT    MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   1.31%               1009MiB / 3.906GiB   25.21%              2.45kB / 1.44kB     0B / 3.53MB         416
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT    MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   1.08%               1009MiB / 3.906GiB   25.21%              2.45kB / 1.44kB     0B / 3.53MB         416
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT    MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   1.08%               1009MiB / 3.906GiB   25.21%              2.45kB / 1.44kB     0B / 3.53MB         416
+[2J[HCONTAINER ID        NAME                CPU %               MEM USAGE / LIMIT    MEM %               NET I/O             BLOCK I/O           PIDS
+54ea8d04df33        loving_lichterman   1.08%               1009MiB / 3.906GiB   25.21%              2.45kB / 1.44kB     0B / 3.53MB         416
