@@ -60,4 +60,19 @@ Here are the results of fit line and Loss value during the training:
 
 ![LassoLossValue](../image/LassoLossValue.png)  
 
-For ridge regression, we just ass a term to the L2 norm, which is the scaled L2 norm of the slope coefficient.
+For ridge regression, we just ass a term to the L2 norm, which is the scaled L2 norm of the slope coefficient.  
+
+Here are the results of fit line and Loss value during the training:
+   
+![RidgeRegressionDataPoints](../image/RidgeRegressionDataPoints.png)  
+
+![RidgeRegressionDataPoints](../image/RidgeLossValue.png)  
+
+* Implement Logistic Regression  
+We implement logistic regression to predict the probability of low birthweight. Logistic regression is a way to turn linear regression into a binary classification. This is accomplished by transforming the linear output in a sigmoid function that scales the output between zero and 1. And the data we use is obtained through the University of Massachusetts Amherst statistical dataset.  
+
+Here is the loss over the iterations and train and test set accuracies.  Since the dataset is only 189 observations, the train and test accuracy plots will change owing to the random splitting of the dataset.  
+
+![CorssEntropyLossLogisticRegression](../image/CorssEntropyLossLogisticRegression.png)
+ 
+ ![Train&TestAccOfLogisticRegression](../image/Train&TestAccOfLogisticRegression.png)
