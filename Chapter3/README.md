@@ -4,7 +4,7 @@
 When ***Ax=b***,the solution to solving ***x*** can be expressed as ***x=(A<sup>T</sup>A)<sup>-1</sup>A<sup>T</sup>b***.  
 
 The plot image that the linear regression produces will be:
-![MatrixInverseMethod](../image/MatrixInverseMethod.png)   
+![MatrixInverseMethod](Image/MatrixInverseMethod.png)   
 
 * Imlementing a **Decomposition Method**  
 
@@ -12,7 +12,7 @@ We implement a matrix decomposition method for linear method. Implementing inver
 
 And the following image shows the result.  
 
-![CholeskyDecompositionMethod](../image/CholeskyDecompositionMethod.png)  
+![CholeskyDecompositionMethod](Image/CholeskyDecompositionMethod.png)  
 
 * The TensorFlow Way of Linear Regression  
 
@@ -20,9 +20,9 @@ Loop through batches of data points and let TensorFlow update the slopes and y-i
 
 Here are the images.  
 
-![SepalLength&PedalWidth](../image/SepalLength&PedalWidth.png)  
+![SepalLength&PedalWidth](Image/SepalLength&PedalWidth.png)  
 
-![L2Loss&Generation](../image/L2Loss&Generation.png)  
+![L2Loss&Generation](Image/L2Loss&Generation.png)  
 
 * Understanding Loss Function in Linear Regression  
 
@@ -30,11 +30,11 @@ We use the same irirs dataset as in the prior recipe, but we will change our los
 
 When the learning rate is 0.1, the loss values will change with following trend:  
 
-![0.1rate&LossFunctionL1&L2](../image/0.1rate&LossFunctionL1&L2.png)  
+![0.1rate&LossFunctionL1&L2](Image/0.1rate&LossFunctionL1&L2.png)  
 
 However, when the learning rate is 0.4, the model will not converge:   
 
-![0.4rate&LossFunctionL1&L2](../image/0.4rate&LossFunctionL1&L2.png)   
+![0.4rate&LossFunctionL1&L2](Image/0.4rate&LossFunctionL1&L2.png)   
 
 * Implement Deming regression
 
@@ -42,11 +42,11 @@ In the recipe, we will implement Deming regression, which means we will need a d
 
 Here are the best fit line and data points:  
 
-![DemingRegression](../image/DemingRegression.png)  
+![DemingRegression](Image/DemingRegression.png)  
 
 And the following is the loss values during the training:  
 
-![DemingLossValue](../image/DemingLossValue.png)  
+![DemingLossValue](Image/DemingLossValue.png)  
 
 * Implement Lasso and Ridge Regression  
 
@@ -56,23 +56,29 @@ For lasso regression, we must add a term that greatly increases our loss functio
 
 Here are the results of fit line and Loss value during the training:  
 
-![LassoRegressionDataPoints](../image/LassoRegressionDataPoints.png)  
+![LassoRegressionDataPoints](Image/LassoRegressionDataPoints.png)  
 
-![LassoLossValue](../image/LassoLossValue.png)  
+![LassoLossValue](Image/LassoLossValue.png)  
 
 For ridge regression, we just ass a term to the L2 norm, which is the scaled L2 norm of the slope coefficient.  
 
 Here are the results of fit line and Loss value during the training:
    
-![RidgeRegressionDataPoints](../image/RidgeRegressionDataPoints.png)  
+![RidgeRegressionDataPoints](Image/RidgeRegressionDataPoints.png)  
 
-![RidgeRegressionDataPoints](../image/RidgeLossValue.png)  
+![RidgeRegressionDataPoints](Image/RidgeLossValue.png)  
 
+* Implement Elastic Net Regression  
+Elastic net regression is a type of regression that combines lasso regression with ridge regression by adding a L1 and L2 regularization term to the loss function.  
+
+Here is loss during the training.  
+
+![ElasticNetLoss](Image/ElasticNetLoss.png)
 * Implement Logistic Regression  
 We implement logistic regression to predict the probability of low birthweight. Logistic regression is a way to turn linear regression into a binary classification. This is accomplished by transforming the linear output in a sigmoid function that scales the output between zero and 1. And the data we use is obtained through the University of Massachusetts Amherst statistical dataset.  
 
 Here is the loss over the iterations and train and test set accuracies.  Since the dataset is only 189 observations, the train and test accuracy plots will change owing to the random splitting of the dataset.  
 
-![CorssEntropyLossLogisticRegression](../image/CorssEntropyLossLogisticRegression.png)
+![CorssEntropyLossLogisticRegression](Image/CorssEntropyLossLogisticRegression.png)
  
- ![Train&TestAccOfLogisticRegression](../image/Train&TestAccOfLogisticRegression.png)
+ ![Train&TestAccOfLogisticRegression](Image/Train&TestAccOfLogisticRegression.png)

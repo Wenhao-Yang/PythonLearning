@@ -43,5 +43,11 @@ All examples of python are from 《**TensorFlow Machine Learning Cookbook**》.
 
 * Implement **Lasso and Ridge Regression**  
 
-* 
+* Implement **Elastic Net Regression**  
+
+* Implement **Logistic Regression**  
+
+## Chapter 4: Support Vector Machines
+
+* **Linear SVM**
 
