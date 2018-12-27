@@ -5,7 +5,7 @@
 @Author: yangwenhao
 @Contact: 874681044@qq.com
 @Software: PyCharm
-@File: LinearSVM.py
+@File: 4.1_LinearSVM.py
 @Time: 2018/12/26 下午9:13
 @Overview: We will create a linear separator from the iris data set.
 """

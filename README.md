@@ -51,3 +51,6 @@ All examples of python are from 《**TensorFlow Machine Learning Cookbook**》.
 
 * **Linear SVM**
 
+* Reduction to Linear Regression
+ 
+
