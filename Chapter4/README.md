@@ -40,17 +40,13 @@ We  apply a non-linear kernel to split the iris dataset. And the kernel is depen
 Here we show the different classification results bu different gamma values.
 
 ![SVMIrisGamma](Image/SVMIrisGamma1.png)  
-
-<center> gamma is 1 </center>  
+ 
 
 ![SVMIrisGamma10](Image/SVMIrisGamma10.png)  
-<center> gamma is 10</center> 
  
 ![SVMIrisGamma25](Image/SVMIrisGamma25.png)
-<center> gamma is 25</center>  
 
 ![SVMIrisGamma100](Image/SVMIrisGamma100.png)
-<center> gamma is 100 </center>  
 
 * Implement a Multi-Class SVM
 
