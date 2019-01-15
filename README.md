@@ -52,5 +52,14 @@ All examples of python are from 《**TensorFlow Machine Learning Cookbook**》.
 * **Linear SVM**
 
 * Reduction to Linear Regression
- 
+
+* Working with Kernels in TensorFlow
+
+* Implementing a Non-Linear SVM
+
+* Implementing a Multi-Class SVM
+
+## Chapter 5: Nearest Neighbor Methods
+
+* 
 

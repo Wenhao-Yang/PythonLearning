@@ -13,13 +13,13 @@ import matplotlib.pyplot as plt
 import numpy as np
 import re
 
-file8G = open('../WavFile/bbp.txt')
+file8G = open('../LocalData/bbp.txt')
 content8G = file8G.readlines()
 
-file4G = open('../WavFile/bbp4G.txt')
+file4G = open('../LocalData/bbp4G.txt')
 content4G = file4G.readlines()
 
-file2C = open('../WavFile/bbp2Core.txt')
+file2C = open('../LocalData/bbp2Core.txt')
 content2C = file2C.readlines()
 
 def dataPro(content):

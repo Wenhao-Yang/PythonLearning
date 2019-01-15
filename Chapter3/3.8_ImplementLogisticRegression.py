@@ -20,7 +20,7 @@ ops.reset_default_graph()
 sess = tf.Session()
 
 # Load the data through the request module and specify which features we want to use.
-birthweight_url = '../WavFile/lowbwt.txt'
+birthweight_url = '../LocalData/lowbwt.txt'
 birth_file = open(birthweight_url).readlines()
 birth_data = birth_file
 

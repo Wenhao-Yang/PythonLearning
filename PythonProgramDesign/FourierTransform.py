@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 import timeit
 import speechpy
 
-fs, signal = read('../WavFile/sound.wav')
+fs, signal = read('../LocalData/sound.wav')
 sign = np.array(signal)
 print('Sample Rate is {}'.format(fs))
 #DFT
