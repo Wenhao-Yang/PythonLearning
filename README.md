@@ -61,5 +61,12 @@ All examples of python are from 《**TensorFlow Machine Learning Cookbook**》.
 
 ## Chapter 5: Nearest Neighbor Methods
 
-* 
+* Working with Nearest Neighbor  
 
+* Working with Text-Based Distances
+
+* Computing with Mixed Distance Functions  
+
+* Using an Address Matching Example
+
+* Using Nearest Neighbor for Image Recognition  
