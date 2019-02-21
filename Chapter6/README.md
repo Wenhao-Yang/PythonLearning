@@ -24,3 +24,17 @@ The following is the loss during the training:
 ![OneHiddenLayer](Image/OneHiddenLayer.png)
 
 Note: In the book, the author set the hidden layer to have 5 nodes, which should be not enough to fit the regression variables. When I change it to 10, to some extent, the underfitting was eliminated.
+
+* **Implement Different Layers**
+
+In the recipe, we create and use convolutional and maxpool layers wigh input data and with fully connected data. And we build two part, one for one-dimensional data and one for two-dimensional data. Those data are obtained from normal distribution.
+
+Here are the details and outputs for these neural networks:
+
+One-dimensional Data:
+
+![Inplement1dNeuralNetwork](Image/Inplement1dNeuralNetwork.png)
+
+Two-dimensional Data:
+
+![Implement2dNeuralNetwork](Image/Implement2dNeuralNetwork.png)
