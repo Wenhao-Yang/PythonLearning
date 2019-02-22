@@ -38,3 +38,11 @@ One-dimensional Data:
 Two-dimensional Data:
 
 ![Implement2dNeuralNetwork](Image/Implement2dNeuralNetwork.png)
+
+* Using Multilayer Neural Networks
+
+In the recipe, we use a multilayer neural network to predict birthweight in the Low Birthweight dataset. The model we are using has 522 variables to fit, which is significant larger than the nine variables that we used in logistic regression model. And here we also use different optimizer function, called Adam optimization, which affects the speed of convergence.
+
+And these are the loss values during the training process:
+
+![MultilayerNeuralNetwork](Image/MultilayerNeuralNetwork.png)

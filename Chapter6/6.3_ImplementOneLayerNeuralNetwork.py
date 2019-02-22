@@ -73,8 +73,8 @@ test_loss = []
 
 for i in range(500):
     # First we select a random set of indices for the batch
-    rand_indices = np.random.choice(len(x_vals_trian), size=batch_size)
-    rand_x = x_vals_trian[rand_indices]
+    rand_indices = np.random.choice(len(x_vals_train), size=batch_size)
+    rand_x = x_vals_train[rand_indices]
     rand_y = np.transpose([y_vals_train[rand_indices]])
 
     sess.run(train_step, feed_dict={x_data: rand_x, y_target: rand_y})
