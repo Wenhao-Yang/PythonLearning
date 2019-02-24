@@ -46,3 +46,7 @@ In the recipe, we use a multilayer neural network to predict birthweight in the 
 And these are the loss values during the training process:
 
 ![MultilayerNeuralNetwork](Image/MultilayerNeuralNetwork.png)
+
+Besides, the Loss and Acccuracy of the model is:
+
+![MultilayerNetworkAccuracy](Image/MultilayerNetworkAccuracy.png)
