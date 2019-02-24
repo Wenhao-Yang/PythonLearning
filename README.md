@@ -73,4 +73,16 @@ All examples of python are from 《**TensorFlow Machine Learning Cookbook**》.
 
 ## Chapter 6: Neural Networks
 
-* 
+* **Implement Operational Gates**
+
+* **Working with Gates and Activation Functions**
+
+* **Implement a One-Layer Neural Network**
+
+* **Implement Different Layers**
+
+* Using Multilayer Neural Networks
+
+* Improving the Predictions of Linear Models
+
+
