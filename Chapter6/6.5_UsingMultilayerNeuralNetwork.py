@@ -125,6 +125,21 @@ plt.ylabel('Loss')
 plt.legend(loc='upper right')
 plt.show()
 
+# Compared the train and test accuracy with Logistic Regression, we could find that we achieved around 60% accuracy after 1000 iterations. And here by creating an indicatorif they are above or below 2500 grams, the following code shows the acccuracy of Neural Network way.
+actuals = np.array([x[1] for x in birth_data])
+test_actuals = actuals[test_indices]
+train_actuals = actuals[train_indices]
+test_pres = [x[0] for x in sess.run(final_output, feed_dict={x_data: x_vals_test})]
+train_pres = [x[0] for x in sess.run(final_output, feed_dict={x_data: x_vals_train})]
+test_pres = np.array([1.0 if x<2500.0 else 0.0 for x in test_pres])
+train_pres = np.array([1.0 if x<2500.0 else 0.0 for x in train_pres])
+
+test_acc = np.mean([x==y for x,y in zip(test_pres, test_actuals)])
+train_acc = np.mean([x==y for x,y in zip(train_pres, train_actuals)])
+print('On predicting the category of low birthweight from regression output (<2500g):')
+print('Test Acc:{}'.format(test_acc))
+print('Train acc:{}'.format(train_acc))
+
 
 
 

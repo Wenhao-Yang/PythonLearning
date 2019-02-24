@@ -50,3 +50,17 @@ And these are the loss values during the training process:
 Besides, the Loss and Acccuracy of the model is:
 
 ![MultilayerNetworkAccuracy](Image/MultilayerNetworkAccuracy.png)
+
+* Improving the Predictions of Linear Models
+
+n the recipe, we will attempt to improve the logistic model of low birthweight with using a neural network. While the model has converged faster than prior models and is maybe a bit more accurate in some case, this comes with a price: we are training many more model variables and have a great chance of overfitting. 
+
+> To see overfitting occurring, the accuracy of training set continues to increase slightly, while the accuracy on the test set stays the same or even decreases slightly. 
+>
+>To combat underfitting, we can increase the model depth or trian the model for more iterations. To address overfitting, we can add more data or add regularization techniques to the model.
+
+The following are the plots of training loss value and accuracy of train and test sets:
+
+![ImprovingPredictionLoss](Image/ImprovingPredictionLoss.png)
+
+![ImprovingPredictionAcc](Image/ImprovingPredictionAcc.png)
