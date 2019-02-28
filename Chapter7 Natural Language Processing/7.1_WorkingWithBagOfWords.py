@@ -67,6 +67,6 @@ else:
     plt.hist(text_lengths, bins=25)
     plt.title('Histogram of # of Words in Texts')
     plt.show()
-    
+
     sentence_size = 25
     min_word_freq = 3
