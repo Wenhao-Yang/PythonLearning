@@ -64,3 +64,15 @@ The following are the plots of training loss value and accuracy of train and tes
 ![ImprovingPredictionLoss](Image/ImprovingPredictionLoss.png)
 
 ![ImprovingPredictionAcc](Image/ImprovingPredictionAcc.png)
+
+* Learning to Play Tic Tac Toe
+
+In the recipe, we will try to use a neural network to learn the optimal response for a number of different boards. The reason is that the game is a deterministic game and the optimal moves are already known.
+
+And here is the plot of loss values during training:
+
+![TicTacToeLoss](Image/TicTacToeLoss.png)
+
+And the code also has bugs because there are problems with checking if the game ends:
+
+![PlayTIcTacToe](Image/PlayTIcTacToe.png)

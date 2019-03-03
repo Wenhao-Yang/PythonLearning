@@ -46,7 +46,7 @@ else:
         writer = csv.writer(temp_output_file)
         writer.writerow(text_data)
 
-texts = [x[1] for x in  text_data]
+texts = [x[1] for x in text_data]
 target = [x[0] for x in text_data]
 
 # Relabel s[am as 1, ham as 0
@@ -72,7 +72,7 @@ sentence_size = 25
 min_word_freq = 3
 
 # TensorFlow has a built-in processing tool for determining vocabulary , called VocabularyProcessor().
-vocab_processor = learn.preprocessing.VocabularyProcessor(sentence_size=sentence_size, min_frequency=min_word_freq)
+vocab_processor = learn.preprocessing.VocabularyProcessor(sentence_size, min_frequency=min_word_freq)
 vocab_processor.fit_transform(texts)
 embedding_size = len(vocab_processor.vocabulary_)
 

@@ -85,4 +85,9 @@ All examples of python are from 《**TensorFlow Machine Learning Cookbook**》.
 
 * Improving the Predictions of Linear Models
 
-* Learning
+* Learning Learning to Play Tic Tac Toe
+
+## Chapter 7 Natural Language Processing
+
+* Working with bag of words
+
