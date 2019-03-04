@@ -7,7 +7,7 @@
 @Software: PyCharm
 @File: 5.5_UsingNearestNeighborForImageRecognition.py
 @Time: 2019/1/24 下午9:25
-@Overview: We use the MNIST dataset for image recognition. And it's composed of thousands of labeled images that are 28*28 pexels in size. And we could compare the results to a neural network in the later chapter. We import the Python Image Library to be able to plot a sample of the predicted outputs.
+@Overview: We use the MNIST dataset for Image recognition. And it's composed of thousands of labeled images that are 28*28 pexels in size. And we could compare the results to a neural network in the later chapter. We import the Python Image Library to be able to plot a sample of the predicted outputs.
 """
 import random
 import numpy as np

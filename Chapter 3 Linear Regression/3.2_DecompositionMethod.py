@@ -47,7 +47,7 @@ best_fit = []
 for i in x_vals:
     best_fit.append(slope*i + y_intercept)
 
-#The code could be used for image size modification
+#The code could be used for Image size modification
 # plt.figure(figsize=(10.8, 7.2))
 plt.plot(x_vals, y_vals, 'o', label='Data')
 plt.plot(x_vals, best_fit, 'r-', label='Best fit lines', linewidth=3)

@@ -6,6 +6,6 @@ In the recipe, the code shows how to work with a bag of words embedding in Tenso
 
 Here is the histogram of Words in Text:
 
-![HistogramOfWordsInText](image/HistogramOfWordsInText.png)
+![HistogramOfWordsInText](Image/HistogramOfWordsInText.png)
 
 > Note: In the example, the limitation on the text size also limits the effect of text length on the prediction. Such imbalanced target data are heavily skewed toward words represented in ham part of the data. 
