@@ -39,40 +39,57 @@ valid_words = ['cliche', 'love', 'hate', 'silly', 'sad']
 def load_movie_data():
     save_folder_name = '../LocalData'
     save_file_name = os.path.join(save_folder_name, 'rt-polaritydata.tar.gz')
-    pos_file = os.path.join(save_folder_name, 'rt-polarity.pos')
-    neg_file = os.path.join(save_folder_name, 'rt-polarity.neg')
+    pos_file = os.path.join(save_folder_name, 'rt-polaritydata','rt-polarity.pos')
+    neg_file = os.path.join(save_folder_name, 'rt-polaritydata','rt-polarity.neg')
 
-    if not os.path.exists(save_file_name):
+    # if not os.path.exists(save_file_name):
+    #     movie_data_url = 'http://www.cs.cornell.edu/people/pabo/movie-review-data/rt-polaritydata.tar.gz'
+    #     stream_data = urllib.request.urlopen(movie_data_url)
+    #     with open(save_file_name, 'wb') as f:
+    #         f.write(stream_data.read())
+
+    if not os.path.exists(os.path.join(save_folder_name, 'rt-polaritydata')):
         movie_data_url = 'http://www.cs.cornell.edu/people/pabo/movie-review-data/rt-polaritydata.tar.gz'
-        stream_data = urllib.request.urlopen(movie_data_url)
-        with open('../LocalData/rt-polaritydata.tar.gz', 'wb') as f:
-            f.write(stream_data.read())
 
+        # Save tar.gz file
+        req = requests.get(movie_data_url, stream=True)
+        with open(save_file_name, 'wb') as f:
+            for chunk in req.iter_content(chunk_size=1024):
+                if chunk:
+                    f.write(chunk)
+                    f.flush()
     if not (os.path.exists(pos_file) and os.path.exists(neg_file)):
-        tar_file = tarfile.open('../LocalData/rt-polaritydata.tar.gz', mode='r:gz')
-        pos = tar_file.extractfile('rt-polaritydata/rt-polarity.pos')
-        neg = tar_file.extractfile('rt-polaritydata/rt-polarity.neg')
-        pos_data = []
-        for line in pos:
-                pos_data.append(line.decode('ISO-8859-1').encode('ascii', errors='ignore').decode())
-        neg_data = []
-        for line in neg:
-                neg_data.append(line.decode('ISO-8859-1').encode('ascii', errors='ignore').decode())
-        tar_file.close()
+        # tar_file = tarfile.open('../LocalData/rt-polaritydata.tar.gz', mode='r:gz')
+        # pos = tar_file.extractfile('rt-polaritydata/rt-polarity.pos')
+        # neg = tar_file.extractfile('rt-polaritydata/rt-polarity.neg')
+        # pos_data = []
+        # for line in pos:
+        #         pos_data.append(line.decode('ISO-8859-1').encode('ascii', errors='ignore').decode())
+        # neg_data = []
+        # for line in neg:
+        #         neg_data.append(line.decode('ISO-8859-1').encode('ascii', errors='ignore').decode())
+        # tar_file.close()
+        #
+        # with open(pos_file, 'w') as pos_file_handler:
+        #         pos_file_handler.write(''.join(pos_data))
+        # with open(neg_file, 'w') as neg_file_handler:
+        #         neg_file_handler.write(''.join(neg_data))
+        # Extract tar.gz file into temp folder
+        tar = tarfile.open(save_file_name, "r:gz")
+        tar.extractall(path=save_folder_name)
+        tar.close()
 
-        with open(pos_file, 'w') as pos_file_handler:
-                pos_file_handler.write(''.join(pos_data))
-        with open(neg_file, 'w') as neg_file_handler:
-                neg_file_handler.write(''.join(neg_data))
     pos_data = []
     neg_data = []
-    with open(pos_file, 'r') as temp_pos_file:
+    with open(pos_file, 'r', encoding='latin-1') as temp_pos_file:
         for row in temp_pos_file:
-            pos_data.append(row)
-    with open(neg_file, 'r') as temp_neg_file:
-        for row in temp_neg_file:
-            neg_data.append(row)
+            pos_data.append(row.encode('ascii', errors='ignore').decode())
 
+    with open(neg_file, 'r', encoding='latin-1') as temp_neg_file:
+        for row in temp_neg_file:
+            neg_data.append(row.encode('ascii', errors='ignore').decode())
+
+    neg_data = [x.rstrip() for x in neg_data]
     texts = pos_data + neg_data
     target = [1]*len(pos_data) + [0]*len(neg_data)
     return(texts, target)
@@ -86,7 +103,7 @@ def normalize_text(texts, stops):
     # Remove numbers
     texts = [''.join(c for c in x if c not in '0123456789') for x in texts]
     # Remove stopwords
-    texts = [''.join([word for word in x.split() if word not in (stops)]) for x in texts]
+    texts = [' '.join([word for word in x.split() if word not in (stops)]) for x in texts]
     # Trim extra whitespace
     texts = [' '.join(x.split()) for x in texts]
     return (texts)
@@ -109,7 +126,7 @@ def build_dictionary(sentences, vocabulary_size):
     # For each word, that we want in the dictionary, add it, then make it the value of the prior dictionary length
     for word, word_count in count:
         word_dict[word] = len(word_dict)
-        return (word_dict)
+    return (word_dict)
 
 # Declare the function that will convert a list of sentences into lists of word indices that we can pass into our embedding lookup function.
 def text_to_numbers(sentences, word_dict):
@@ -148,7 +165,7 @@ def generate_batch_data(sentences, batch_size, window_size, method='skip-gram'):
         label_indices = [ix if ix<window_size else window_size for ix,x in enumerate(window_sequences)]
         # Pull out center word of interest for each window and create a tuple for each window
         if method=='skip-gram':
-            batch_and_labels = [(x[y], x[:y] + x[(y+1)]) for x, y in zip(window_sequences, label_indices)]
+            batch_and_labels = [(x[y], x[:y] + x[(y+1):]) for x, y in zip(window_sequences, label_indices)]
             # Make it into a big list of tuples(target word, surrounding word)
             tuple_data = [(x, y_) for x, y in batch_and_labels for y_ in y]
         else:
@@ -171,7 +188,7 @@ def generate_batch_data(sentences, batch_size, window_size, method='skip-gram'):
 # Initialize the embedding matrix and declare the placeholders, and the embedding lookup function
 embeddings = tf.Variable(tf.random_uniform([vocabulary_size, embedding_size], -1.0, 1.0))
 x_inputs = tf.placeholder(tf.int32, shape=[batch_size])
-y_target = tf.placeholder(tf.int32, shpape=[batch_size, 1])
+y_target = tf.placeholder(tf.int32, shape=[batch_size, 1])
 valid_dataset = tf.constant(valid_examples, dtype=tf.int32)
 
 # Lookup the word embedding
@@ -179,6 +196,55 @@ embed = tf.nn.embedding_lookup(embeddings, x_inputs)
 
 # Use a loos function called noise-contrastive error to avoid problems caused by the sparse categories results.
 nce_weights = tf.Variable(tf.truncated_normal([vocabulary_size, embedding_size], stddev=1.0 / np.sqrt(embedding_size)))
-nce_biases = tf.Variables(tf.zeros([vocabulary_size]))
-loss = tf.reduce_mean(tf.nn.nce_loss(nce_weights, nce_biases, embed, y_target, num_sampled, vocabulary_size))
+nce_biases = tf.Variable(tf.zeros([vocabulary_size]))
+loss = tf.reduce_mean(tf.nn.nce_loss(weights=nce_weights,
+                                     biases=nce_biases,
+                                     labels=y_target,
+                                     inputs=embed,
+                                     num_sampled=num_sampled,
+                                     num_classes=vocabulary_size))
 
+# Create a way to find nearby words to our validation words. Compute the cosine similarity between the validation set and all of our word embedding
+norm = tf.sqrt(tf.reduce_sum(tf.square(embeddings), 1, keep_dims=True))
+normalized_embeddings = embeddings / norm
+valid_embeddings = tf.nn.embedding_lookup(normalized_embeddings, valid_dataset)
+similarity = tf.matmul(valid_embeddings, normalized_embeddings, transpose_b=True)
+
+# Optimizer function
+optimizer = tf.train.GradientDescentOptimizer(learning_rate=1.0).minimize(loss)
+init = tf.initialize_all_variables()
+sess.run(init)
+
+# Train the embeddings
+loss_vec = []
+loss_x_vec = []
+for i in range(generations):
+    batch_inputs, batch_labels = generate_batch_data(text_data, batch_size, window_size)
+    feed_dict = {x_inputs: batch_inputs, y_target: batch_labels}
+    sess.run(optimizer, feed_dict=feed_dict)
+
+    if (i+1) % print_loss_every == 0:
+        loss_val = sess.run(loss, feed_dict=feed_dict)
+        loss_vec.append(loss_val)
+        loss_x_vec.append(i+1)
+        print('Loss at step {} : {}'.format(i+1, loss_val))
+
+    if (i+1) % print_valid_every == 0:
+        sim = sess.run(similarity, feed_dict=feed_dict)
+        for j in range(len(valid_words)):
+            valid_words = word_dictionary_rev[valid_examples[j]]
+            top_k = 5
+            nearest = (-sim[j, :]).argsort()[1:top_k+1]
+            log_str = 'Nearest to {}:'.format(valid_words)
+            for k in range(top_k):
+                close_word = word_dictionary_rev[nearest[k]]
+                log_str = '%s %s,' % (log_str, close_word)
+            print(log_str)
+
+plt.plot(loss_x_vec, loss_vec, 'r', label='Train Set Accuracy')
+plt.title('Train set Accuracy')
+plt.ylabel('Accuracy')
+plt.xlabel('Generation')
+plt.legend(loc='lower right')
+
+plt.show()
