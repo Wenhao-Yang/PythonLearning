@@ -10,7 +10,6 @@
 @Overview: Implement the CBOW method of word2vec. Predict a single target word from a surrounding window of context words.
 """
 import pickle
-
 import tensorflow as tf
 import matplotlib.pyplot as plt
 import random
@@ -126,18 +125,18 @@ for i in range(generations):
     # Save dictionary + embeddings
     if (i+1) % save_embeddings_every == 0:
         # Save vocabulary dictionary
-        with open(os.path.join('../LocalData', 'movie_vocab.pkl'), 'wb') as f:
+        with open(os.path.join('temp', 'movie_vocab.pkl'), 'wb') as f:
             pickle.dump(word_dictionary, f)
 
         # save embeddings
-        model_checkpoint_path = os.path.join(os.getcwd(), '../LocalData', 'cbow_movie_embeddings.ckpt')
+        model_checkpoint_path = os.path.join(os.getcwd(), 'temp', 'cbow_movie_embeddings.ckpt')
         save_path = saver.save(sess, model_checkpoint_path)
         print('Model saved in file:{}'.format(save_path))
 
-plt.plot(loss_x_vec, loss_vec, 'r', label='Train Set Accuracy')
-plt.title('Train set Accuracy')
-plt.ylabel('Accuracy')
+plt.plot(loss_x_vec, loss_vec, 'r', label='Train Set Loss')
+plt.title('Train Loss Values')
+plt.ylabel('LOss')
 plt.xlabel('Generation')
-plt.legend(loc='lower right')
+plt.legend(loc='upper right')
 
 plt.show()
