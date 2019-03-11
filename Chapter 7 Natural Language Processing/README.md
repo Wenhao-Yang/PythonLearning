@@ -29,3 +29,13 @@ Here is the training set accuracy:
 * Working with CBOW Embedding
 
 CBOW method of word2vec is about predicting a single target word from a surrounding window of context words.
+
+* Making Predictions with Word2vec
+
+In the recipe, the prior-trained embeddings to perform sentiment analysis by training a logistic linear model to predict a good or bad movie review.
+
+This is the train loss and accuracy:
+
+![MakingPredictionwithWord2vecLoss](Image/MakingPredictionwithWord2vecLoss.png)
+
+![MakingPredictionwithWord2vecAccuracy](Image/MakingPredictionwithWord2vecAccuracy.png)
