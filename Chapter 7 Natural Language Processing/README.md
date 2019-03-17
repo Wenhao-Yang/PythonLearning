@@ -39,3 +39,21 @@ This is the train loss and accuracy:
 ![MakingPredictionwithWord2vecLoss](Image/MakingPredictionwithWord2vecLoss.png)
 
 ![MakingPredictionwithWord2vecAccuracy](Image/MakingPredictionwithWord2vecAccuracy.png)
+
+* Using Doc2vec for Sentiment Analysis
+
+In this part, we extend the methodologies of train word embeddings to have a document embeddings. And it should capture the relationship of words to the document that they come from. Doc2vec simply adds an additional embedding matrix for the documents and uses a window of words to plus the document index to predict the next word. In the recipe, we concatenate the document embeddings to the end of the word embeddings.
+
+The same as previous procedure, firstly, we create and save Doc2vec embeddings. Secondly, we use them to make sentiment predictions on the movie dataset.
+
+The following figure is the loss during create and save the embeddings:
+
+![Doc2vecTrainLoss](Image/Doc2vecTrainLoss.png)
+
+Here are the loss values for training and test the logistic regression model to make predictions:
+
+![MakingPredictionwithDoc2vecLoss](Image/MakingPredictionwithDoc2vecLoss.png)
+
+And this is the accuracy on the train and test set. Compared with the Word2vec, the accuracy shows that Doc2vec have better performance.
+
+![MakingPredictionwithDoc2vecAccuracy](Image/MakingPredictionwithDoc2vecAccuracy.png)

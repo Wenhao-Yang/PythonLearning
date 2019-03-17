@@ -1,2 +1,2 @@
-model_checkpoint_path: "C:\\Users\\Root\\PycharmProjects\\PythonLearning\\Chapter 7 Natural Language Processing\\../LocalData\\cbow_movie_embeddings.ckpt"
-all_model_checkpoint_paths: "C:\\Users\\Root\\PycharmProjects\\PythonLearning\\Chapter 7 Natural Language Processing\\../LocalData\\cbow_movie_embeddings.ckpt"
+model_checkpoint_path: "C:\\Users\\Root\\PycharmProjects\\PythonLearning\\Chapter 7 Natural Language Processing\\temp\\doc2vec_movie_embeddings.ckpt"
+all_model_checkpoint_paths: "C:\\Users\\Root\\PycharmProjects\\PythonLearning\\Chapter 7 Natural Language Processing\\temp\\doc2vec_movie_embeddings.ckpt"
