@@ -91,3 +91,14 @@ All examples of python are from 《**TensorFlow Machine Learning Cookbook**》.
 
 * Working with bag of words
 
+* Implement TF-IDF
+
+* Working with Skip-gram Embedding
+
+* Working with CBOW Embedding
+
+* Making Predictions with Word2vec
+
+* Using Doc2vec for Sentiment Analysis
+
+
