@@ -57,7 +57,7 @@ def load_batch_from_file(file):
 def save_images_from_dict(image_dict, folder='data_dir'):
     for ix, label in enumerate(image_dict['labels']):
         folder_path = os.path.join(data_dir, folder, objects[label])
-        filename = image_dict['filename'][ix]
+        filename = image_dict['filenames'][ix]
         # Transform image data
         image_array = image_dict['data'][ix]
         image_array.resize([3, 32, 32])
