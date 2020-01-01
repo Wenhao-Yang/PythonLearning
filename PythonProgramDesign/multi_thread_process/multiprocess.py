@@ -16,7 +16,7 @@ def get_from_queue(queue, pid):
 
     while not queue.empty():
         cont = queue.get()
-        time.sleep(1)
+        # time.sleep(1)
         print('Thread {} get {}, and queue has {} left.'.format(pid, cont, queue.qsize()))
 
 if __name__ == '__main__':
