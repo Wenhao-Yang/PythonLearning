@@ -114,7 +114,8 @@ print('File size: %f' % kaldi_size)
 
 
 
-t = [t1, t2, t3, t4]
+t = np.array([t1, t2, t3, t4])
+t = t/min(t)
 s = np.array([npzsize, npysize, mat_size, kaldi_size])
 s = s/min(s)
 for i in range(len(t)):
