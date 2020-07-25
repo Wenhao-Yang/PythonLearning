@@ -1,2 +1,12 @@
 venv
 .idea
+Chapter 8 Convolutional Neural Networks/example_code
+Chapter 8 Convolutional Neural Networks/temp
+PythonProgramDesign/CtoPy/build
+PythonProgramDesign/MachineLearning/runs
+PythonProgramDesign/misc/test_npy
+PythonProgramDesign/misc/各工地管理人员安排
+TorchLearn/hist
+Chapter 8 Convolutional Neural Networks/models/models
+*.npz
+*.txt
