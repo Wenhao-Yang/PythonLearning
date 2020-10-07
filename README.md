@@ -17,5 +17,22 @@ All examples of python are from 《**TensorFlow Machine Learning Cookbook**》.
 
 ## Other Python
 
+### NumPy Matrix Storage IO
+
+Compared the following methods for storing and reading matrix in PythonProgramDesign/IOTest/mat_io_speed.py:
+
+- h5py
+- lmdb
+- npz
+- pickle
+- kaldiio
+- npy
+- mat
+- kalid_io
+
+![IO Details](PythonProgramDesign/IOTest/mat.io.all.png)
+
+
+
 
 

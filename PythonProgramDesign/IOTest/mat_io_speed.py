@@ -9,6 +9,20 @@
 @Time: 2020/4/1 12:53 PM
 @Overview: Testing that mat saving in .mat is faster than .npz,
 but the file size of .npz is 94% of that mat
+
+
+# For kaldiio when compression method 1 in kaldi is applied,
+# for a float32 matrix with shape of 1024x1024
+#
+# (np.random.rand(1024, 1024) from 0~1 )
+# the sum of deviation could be 1022.04
+# and the avg is 0.00097
+#
+# (np.random.rand(1024, 1024), from -20~20 )
+# the sum of deviation could be 40889.54
+# and the avg is 0.03900
+
+Other results in PythonProgramDesign/IOTest/mat.io.all.avg.png and PythonProgramDesign/IOTest/mat.io.all.avg.png
 """
 import kaldi_io
 import lmdb
@@ -120,16 +134,7 @@ def kaldiio_save(ark_dir, kwds):
         numpy_array.shape
     return ark_dir
 
-# for kaldiio
-# when compression method 1 in kaldi is applied,
-# for a float32 matrix with shape of 1024x1024
-# (np.random.rand(1024, 1024) from 0~1 )
-# the sum of deviation could be 1022.04
-# and the avg is 0.00097
 
-# (np.random.rand(1024, 1024), from -20~20 )
-# the sum of deviation could be 40889.54
-# and the avg is 0.03900
 
 @fn_timer
 def pickle_save(pick_dir, kwds):
