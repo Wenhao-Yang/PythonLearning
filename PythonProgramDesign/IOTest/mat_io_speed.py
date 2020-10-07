@@ -159,26 +159,23 @@ def lmdb_save(lmdir_dir, kwds):
         # tqdm_iter.set_description('Write {}'.format(key))
         key_byte = key.encode('ascii')
         data = kwds[key]
-
-        # H, W = data.shape
         # resolutions.append('{:d}_{:d}'.format(H, W))
         txn.put(key_byte, data)
 
-        if (idx + 1) % 200 == 0:
+        if (idx + 1) % 200 == 0 or (idx + 1) == len(utts):
             txn.commit()
             # commit 之后需要再次 begin
             txn = env.begin(write=True)
-    txn.commit()
-    env.close()
+
+    # env.close()
     # print('Finish writing lmdb.')
-
-    env = lmdb.open(lmdb_file, map_size=data_size * 10)
-    for key in kwds.keys():
-        with env.begin(write=False) as txn:
+    # env = lmdb.open(lmdb_file, map_size=data_size * 10)
+    with env.begin(write=False) as txn:
+        for key in kwds.keys():
             buf = txn.get(key.encode('ascii'))
-        utt = np.frombuffer(buf, dtype=np.float32)
-
-        utt.shape
+            utt = np.frombuffer(buf, dtype=np.float32)
+            utt.shape
+    env.close()
 
     return lmdir_dir
 
