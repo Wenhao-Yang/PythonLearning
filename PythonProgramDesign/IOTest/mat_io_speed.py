@@ -19,6 +19,9 @@ import time
 import random
 import matplotlib.pyplot as plt
 import pickle
+import h5py
+import kaldiio
+from kaldiio import WriteHelper
 
 def getdirsize(dir):
    size = 0
@@ -116,8 +119,6 @@ kaldi_size = getdirsize(ark_dir) / 1024 / 1024
 print('File size: %f' % kaldi_size)
 
 # Kaldiio
-import kaldiio
-from kaldiio import WriteHelper
 
 ark_dir = 'PythonProgramDesign/misc/kaldiio'
 if not os.path.exists(ark_dir):
@@ -214,7 +215,6 @@ print('\nlmdb files Time consuming: %f' % (t6))
 lmdbsize = getdirsize(lmdir_dir) / 1024 / 1024
 print('File size: %f' % lmdbsize)
 
-import h5py
 h5py_dir = 'PythonProgramDesign/misc/h5py'
 if not os.path.exists(h5py_dir):
     os.makedirs(h5py_dir)
