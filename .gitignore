@@ -10,3 +10,9 @@ TorchLearn/hist
 Chapter 8 Convolutional Neural Networks/models/models
 *.npz
 *.txt
+*.h5py
+*.scp
+*.ark
+*.mdb
+*.pickle
+*.mat
