@@ -45,7 +45,7 @@ def fn_timer(function):
         t = float(t1-t0)
         size = getdirsize(result)
 
-        print(" Running %s: %.4f seconds, %.4f MB.\n" %
+        print(" Running %s: %.4f seconds, %.4f MB." %
               (function.__name__, float(t), size))
         return t, size
 
@@ -119,6 +119,17 @@ def kaldiio_save(ark_dir, kwds):
         numpy_array = d[u]
         numpy_array.shape
     return ark_dir
+
+# for kaldiio
+# when compression method 1 in kaldi is applied,
+# for a float32 matrix with shape of 1024x1024
+# (np.random.rand(1024, 1024) from 0~1 )
+# the sum of deviation could be 1022.04
+# and the avg is 0.00097
+
+# (np.random.rand(1024, 1024), from -20~20 )
+# the sum of deviation could be 40889.54
+# and the avg is 0.03900
 
 @fn_timer
 def pickle_save(pick_dir, kwds):
@@ -205,6 +216,7 @@ if __name__ == '__main__':
     for num in [100, 500, 1000, 2000, 5000, 10000, 20000, 50000] :
         kwds = {}
         utts = []
+        print('\nRandomly generate array with lenght %d: ' % num)
         for i in range(num):
             feat_len = np.random.randint(250, 400)
             kwds['mat%s'%str(i)]=np.random.rand(feat_len, 64).astype(np.float32)
