@@ -33,3 +33,34 @@ This is the Accuracy of test set:
 * Retraining Exist CNNs models
 
 In this recipe, we will show how to use a pre-trained TensorFlow image recognition model and fine-tune it to work on a different set of images.
+
+* Applying Stylenet /Neural-Style
+
+Stylenet is a procedure that attempts to learn an image style from one picture and apply it to a second picture while keeping the second image structure.
+
+However, the output for the Stylenet is not ideal as the example mentioned in the book. As I change the optimizer or the weight of different layers, it didn't change a lot. Here is a output image during the procedure.
+
+![temp_output_74](8.4_ApplyingStylenet/temp_output_74.jpg)
+
+* Implementing DeepDream
+
+As some of the intermediate nodes of trained CNN detect features of labels, we can find ways to transform any image to reflect those node features of any nodes we choose. In this recipe, we will go through the DeepDream tutorial on TensorFlow's website, which includes preparing reader to use the DeepDream algorithm for exploration of CNNs and features created in such CNNs.
+
+Here are the results for applying DeepDream algorithm on the book_cover.jpg under the different feature numbers.
+
+![DeepDream30](Image/DeepDream30.png)
+ Feature number 30
+ 
+ ![DeepDream30](Image/DeepDream50.png)
+ Feature number 50
+ 
+ ![DeepDream30](Image/DeepDream100.png)
+ Feature number 100
+ 
+ ![DeepDream30](Image/DeepDream110.png)
+ Feature number 110
+ 
+ ![DeepDream30](Image/DeepDream139.png)
+ Feature number 139
+ 
+ 
