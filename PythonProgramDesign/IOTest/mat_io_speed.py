@@ -23,7 +23,7 @@ import h5py
 import kaldiio
 from kaldiio import WriteHelper
 from functools import wraps
-
+import shutil
 
 def getdirsize(dir):
     if os.path.isfile(dir):
@@ -38,21 +38,20 @@ def getdirsize(dir):
 def fn_timer(function):
     @wraps(function)
     def function_timer(*args, **kwargs):
-        print('Start %s ...' % function.__name__)
+        print('Start %s ...' % function.__name__, end='')
         t0 = time.time()
         result = function(*args, **kwargs)
         t1 = time.time()
         t = float(t1-t0)
         size = getdirsize(result)
 
-        print("Total time running %s: %.4f seconds, %.4f MB.\n" %
+        print(" Running %s: %.4f seconds, %.4f MB.\n" %
               (function.__name__, float(t), size))
         return t, size
 
     return function_timer
 
 @fn_timer
-@profile
 def npz_save(npz_file, kwds):
     np.savez_compressed(npz_file, **kwds)
     test_np = np.load(npz_file)
@@ -63,8 +62,8 @@ def npz_save(npz_file, kwds):
     return npz_file
 
 @fn_timer
-@profile
 def npy_save(np_dir, kwds):
+
     uid_npath = {}
     for u in kwds.keys():
         np.save(os.path.join(np_dir, u + '.npy'), kwds[u])
@@ -77,7 +76,6 @@ def npy_save(np_dir, kwds):
     return np_dir
 
 @fn_timer
-@profile
 def mat_save(mat_file, kwds):
     sio.savemat(mat_file, kwds, do_compression=True)
     test_mat = sio.loadmat(mat_file)
@@ -88,7 +86,6 @@ def mat_save(mat_file, kwds):
     return mat_file
 
 @fn_timer
-@profile
 def kalid_io_save(ark_dir, kwds):
     ark_file = os.path.join(ark_dir, 'test.ark')
     feat_scp = os.path.join(ark_dir, 'feat.scp')
@@ -109,7 +106,6 @@ def kalid_io_save(ark_dir, kwds):
     return ark_dir
 
 @fn_timer
-@profile
 def kaldiio_save(ark_dir, kwds):
     ark_file = os.path.join(ark_dir, 'test.ark')
     feat_scp = os.path.join(ark_dir, 'feat.scp')
@@ -125,7 +121,6 @@ def kaldiio_save(ark_dir, kwds):
     return ark_dir
 
 @fn_timer
-@profile
 def pickle_save(pick_dir, kwds):
     pick_file = os.path.join(pick_dir, 'test.pickle')
     with open(pick_file, 'wb') as pic_f:
@@ -140,10 +135,9 @@ def pickle_save(pick_dir, kwds):
     return pick_dir
 
 @fn_timer
-@profile
 def lmdb_save(lmdir_dir, kwds):
     lmdb_file = os.path.join(lmdir_dir, 'test.lmdb')
-    data_size_per_exa = np.random.rand(234, 56).astype(np.float32).nbytes
+    data_size_per_exa = np.random.rand(400, 64).astype(np.float32).nbytes
     # print('data size per examples is: ', data_size_per_exa)
     data_size = data_size_per_exa * len(utts)
 
@@ -180,7 +174,6 @@ def lmdb_save(lmdir_dir, kwds):
     return lmdir_dir
 
 @fn_timer
-@profile
 def h5py_save(h5py_dir, kwds):
     h5py_file = os.path.join(h5py_dir, 'test.h5py')
 
@@ -200,66 +193,114 @@ def h5py_save(h5py_dir, kwds):
 
 if __name__ == '__main__':
 
-    kwds = {}
-    utts = []
-    for i in range(10000):
-        kwds['mat%s'%str(i)]=np.random.rand(234, 56).astype(np.float32)
-        utts.append('mat%s'%str(i))
+    npz_point = []
+    npy_point = []
+    mat_point = []
+    kaldi_io_point = []
+    kaldiio_point = []
+    pick_point = []
+    lmdb_point = []
+    h5py_point = []
 
-    random.shuffle(utts)
+    for num in [100, 500, 1000, 2000, 5000, 10000, 20000, 50000] :
+        kwds = {}
+        utts = []
+        for i in range(num):
+            feat_len = np.random.rand(250, 400)
+            kwds['mat%s'%str(i)]=np.random.rand(feat_len, 64).astype(np.float32)
+            utts.append('mat%s'%str(i))
 
-    npz_file = 'PythonProgramDesign/misc/test.npz'
-    t1,npzsize = npz_save(npz_file, kwds)
+        random.shuffle(utts)
 
-    np_dir = 'PythonProgramDesign/misc/test_npy'
-    if not os.path.exists(np_dir):
+        npz_file = 'PythonProgramDesign/misc/test.npz'
+        if os.path.exists(npz_file):
+            os.remove(npz_file)
+
+        t1,npzsize = npz_save(npz_file, kwds)
+        npz_point.append([t1, npzsize])
+
+        np_dir = 'PythonProgramDesign/misc/test_npy'
+        if os.path.exists(np_dir):
+            shutil.rmtree(np_dir)
+
         os.makedirs(np_dir)
-    t2,npysize = npy_save(np_dir, kwds)
+        t2,npysize = npy_save(np_dir, kwds)
+        npy_point.append([t2, npysize])
 
-    mat_file = 'PythonProgramDesign/misc/test.mat'
-    t3,matsize = mat_save(mat_file, kwds)
+        mat_file = 'PythonProgramDesign/misc/test.mat'
+        if os.path.exists(mat_file):
+            os.remove(mat_file)
+        t3,matsize = mat_save(mat_file, kwds)
+        mat_point.append([t3, matsize])
 
-    # Kaldi_io
-    ark_dir = 'PythonProgramDesign/misc/kaldi_io'
-    if not os.path.exists(ark_dir):
+        # Kaldi_io
+        ark_dir = 'PythonProgramDesign/misc/kaldi_io'
+        if os.path.exists(ark_dir):
+            shutil.rmtree(ark_dir)
+
         os.makedirs(ark_dir)
-    t4,kaldisize = kalid_io_save(ark_dir, kwds)
+        t4,kaldisize = kalid_io_save(ark_dir, kwds)
+        kaldi_io_point.append([t4, kaldisize])
 
-    # Kaldiio
-    ark_dir = 'PythonProgramDesign/misc/kaldiio'
-    if not os.path.exists(ark_dir):
+        # Kaldiio
+        ark_dir = 'PythonProgramDesign/misc/kaldiio'
+        if os.path.exists(ark_dir):
+            shutil.rmtree(ark_dir)
+
         os.makedirs(ark_dir)
-    t5, kaldiiosize = kaldiio_save(ark_dir, kwds)
+        t5, kaldiiosize = kaldiio_save(ark_dir, kwds)
+        kaldiio_point.append([t5, kaldiiosize])
 
-    pick_dir = 'PythonProgramDesign/misc/pick'
-    if not os.path.exists(pick_dir):
+        pick_dir = 'PythonProgramDesign/misc/pick'
+        if os.path.exists(pick_dir):
+            shutil.rmtree(pick_dir)
         os.makedirs(pick_dir)
-    t6,picksize = pickle_save(pick_dir, kwds)
 
-    lmdir_dir = 'PythonProgramDesign/misc/lmdir'
-    if not os.path.exists(lmdir_dir):
+        t6,picksize = pickle_save(pick_dir, kwds)
+        pick_point.append([t6, picksize])
+
+        lmdir_dir = 'PythonProgramDesign/misc/lmdir'
+        if os.path.exists(lmdir_dir):
+            shutil.rmtree(lmdir_dir)
         os.makedirs(lmdir_dir)
-    t7,lmdbsize = lmdb_save(lmdir_dir, kwds)
 
-    h5py_dir = 'PythonProgramDesign/misc/h5py'
-    if not os.path.exists(h5py_dir):
+        t7,lmdbsize = lmdb_save(lmdir_dir, kwds)
+        lmdb_point.append([t7, lmdbsize])
+
+        h5py_dir = 'PythonProgramDesign/misc/h5py'
+        if os.path.exists(h5py_dir):
+            shutil.rmtree(h5py_dir)
         os.makedirs(h5py_dir)
-    t8,h5pysize = h5py_save(h5py_dir, kwds)
-
+        t8,h5pysize = h5py_save(h5py_dir, kwds)
+        h5py_point.append([t8, h5pysize])
 
     plt.figure(figsize=(12, 8))
     plt.title('Data IO')
-    t = np.array([t1, t2, t3, t4, t5, t6, t7, t8])
-    t = t #/min(t)
-    s = np.array([npzsize, npysize, matsize, kaldisize, kaldiiosize, picksize, lmdbsize, h5pysize])
-    s = s #/min(s)
+
+    npz_point = np.array(npz_point)
+    npy_point = np.array(npy_point)
+    mat_point = np.array(mat_point)
+    kaldi_io_point = np.array(kaldi_io_point)
+    kaldiio_point = np.array(kaldiio_point)
+    pick_point = np.array(pick_point)
+    lmdb_point = np.array(lmdb_point)
+    h5py_point = np.array(h5py_point)
+
+    # t = np.array([t1, t2, t3, t4, t5, t6, t7, t8])
+    # t = t #/min(t)
+    # s = np.array([npzsize, npysize, matsize, kaldisize, kaldiiosize, picksize, lmdbsize, h5pysize])
+    # s = s #/min(s)
     annote = ['npz', 'npys', 'mat', 'kaldi_io', 'kaldiio', 'pickle', 'lmdb', 'h5py']
-    for i in range(len(t)):
-        plt.scatter(t[i], s[i])
-        plt.text(t[i], s[i], annote[i])
+    # for i in range(len(t)):
+    #     plt.scatter(t[i], s[i])
+        # plt.text(t[i], s[i], annote[i])
+
+    for points in npz_file,npy_point,mat_point,kaldi_io_point,kaldiio_point,pick_point,lmdb_point,h5py_point:
+        plt.plot(points[:,0], points[:,1])
 
     plt.xlabel('Time (s)')
     plt.ylabel('Size (MB)')
+    plt.legend(annote)
     plt.savefig("mat.io.png")
     # plt.show()
 
