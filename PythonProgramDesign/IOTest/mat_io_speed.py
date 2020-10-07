@@ -10,6 +10,8 @@
 @Overview: Testing that mat saving in .mat is faster than .npz,
 but the file size of .npz is 94% of that mat
 """
+import profile
+
 import kaldi_io
 import lmdb
 import numpy as np
@@ -51,6 +53,7 @@ def fn_timer(function):
 
     return function_timer
 
+@profile
 @fn_timer
 def npz_save(npz_file, kwds):
     np.savez_compressed(npz_file, **kwds)
@@ -61,7 +64,7 @@ def npz_save(npz_file, kwds):
 
     return npz_file
 
-
+@profile
 @fn_timer
 def npy_save(np_dir, kwds):
     uid_npath = {}
@@ -75,7 +78,7 @@ def npy_save(np_dir, kwds):
 
     return np_dir
 
-
+@profile
 @fn_timer
 def mat_save(mat_file, kwds):
     sio.savemat(mat_file, kwds, do_compression=True)
@@ -86,7 +89,7 @@ def mat_save(mat_file, kwds):
 
     return mat_file
 
-
+@profile
 @fn_timer
 def kalid_io_save(ark_dir, kwds):
     ark_file = os.path.join(ark_dir, 'test.ark')
@@ -107,7 +110,7 @@ def kalid_io_save(ark_dir, kwds):
 
     return ark_dir
 
-
+@profile
 @fn_timer
 def kaldiio_save(ark_dir, kwds):
     ark_file = os.path.join(ark_dir, 'test.ark')
@@ -123,7 +126,7 @@ def kaldiio_save(ark_dir, kwds):
         numpy_array.shape
     return ark_dir
 
-
+@profile
 @fn_timer
 def pickle_save(pick_dir, kwds):
     pick_file = os.path.join(pick_dir, 'test.pickle')
@@ -138,12 +141,12 @@ def pickle_save(pick_dir, kwds):
 
     return pick_dir
 
-
+@profile
 @fn_timer
 def lmdb_save(lmdir_dir, kwds):
     lmdb_file = os.path.join(lmdir_dir, 'test.lmdb')
     data_size_per_exa = np.random.rand(234, 56).astype(np.float32).nbytes
-    print('data size per examples is: ', data_size_per_exa)
+    # print('data size per examples is: ', data_size_per_exa)
     data_size = data_size_per_exa * len(utts)
 
     env = lmdb.open(lmdb_file, map_size=data_size * 10)
@@ -169,10 +172,9 @@ def lmdb_save(lmdir_dir, kwds):
             txn = env.begin(write=True)
     txn.commit()
     env.close()
-    print('Finish writing lmdb.')
+    # print('Finish writing lmdb.')
 
     env = lmdb.open(lmdb_file, map_size=data_size * 10)
-
     for key in kwds.keys():
         with env.begin(write=False) as txn:
             buf = txn.get(key.encode('ascii'))
@@ -182,7 +184,7 @@ def lmdb_save(lmdir_dir, kwds):
 
     return lmdir_dir
 
-
+@profile
 @fn_timer
 def h5py_save(h5py_dir, kwds):
     h5py_file = os.path.join(h5py_dir, 'test.h5py')
