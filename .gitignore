@@ -16,3 +16,4 @@ Chapter 8 Convolutional Neural Networks/models/models
 *.mdb
 *.pickle
 *.mat
+*.bundle

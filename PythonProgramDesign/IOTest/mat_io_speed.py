@@ -206,7 +206,7 @@ if __name__ == '__main__':
         kwds = {}
         utts = []
         for i in range(num):
-            feat_len = np.random.rand(250, 400)
+            feat_len = np.random.randint(250, 400)
             kwds['mat%s'%str(i)]=np.random.rand(feat_len, 64).astype(np.float32)
             utts.append('mat%s'%str(i))
 
