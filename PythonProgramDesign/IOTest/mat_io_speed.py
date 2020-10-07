@@ -51,8 +51,8 @@ def fn_timer(function):
 
     return function_timer
 
-@profile
 @fn_timer
+@profile
 def npz_save(npz_file, kwds):
     np.savez_compressed(npz_file, **kwds)
     test_np = np.load(npz_file)
@@ -62,8 +62,8 @@ def npz_save(npz_file, kwds):
 
     return npz_file
 
-@profile
 @fn_timer
+@profile
 def npy_save(np_dir, kwds):
     uid_npath = {}
     for u in kwds.keys():
@@ -76,8 +76,8 @@ def npy_save(np_dir, kwds):
 
     return np_dir
 
-@profile
 @fn_timer
+@profile
 def mat_save(mat_file, kwds):
     sio.savemat(mat_file, kwds, do_compression=True)
     test_mat = sio.loadmat(mat_file)
@@ -87,8 +87,8 @@ def mat_save(mat_file, kwds):
 
     return mat_file
 
-@profile
 @fn_timer
+@profile
 def kalid_io_save(ark_dir, kwds):
     ark_file = os.path.join(ark_dir, 'test.ark')
     feat_scp = os.path.join(ark_dir, 'feat.scp')
@@ -108,8 +108,8 @@ def kalid_io_save(ark_dir, kwds):
 
     return ark_dir
 
-@profile
 @fn_timer
+@profile
 def kaldiio_save(ark_dir, kwds):
     ark_file = os.path.join(ark_dir, 'test.ark')
     feat_scp = os.path.join(ark_dir, 'feat.scp')
@@ -124,8 +124,8 @@ def kaldiio_save(ark_dir, kwds):
         numpy_array.shape
     return ark_dir
 
-@profile
 @fn_timer
+@profile
 def pickle_save(pick_dir, kwds):
     pick_file = os.path.join(pick_dir, 'test.pickle')
     with open(pick_file, 'wb') as pic_f:
@@ -139,8 +139,8 @@ def pickle_save(pick_dir, kwds):
 
     return pick_dir
 
-@profile
 @fn_timer
+@profile
 def lmdb_save(lmdir_dir, kwds):
     lmdb_file = os.path.join(lmdir_dir, 'test.lmdb')
     data_size_per_exa = np.random.rand(234, 56).astype(np.float32).nbytes
@@ -182,8 +182,8 @@ def lmdb_save(lmdir_dir, kwds):
 
     return lmdir_dir
 
-@profile
 @fn_timer
+@profile
 def h5py_save(h5py_dir, kwds):
     h5py_file = os.path.join(h5py_dir, 'test.h5py')
 
