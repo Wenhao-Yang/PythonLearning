@@ -10,8 +10,6 @@
 @Overview: Testing that mat saving in .mat is faster than .npz,
 but the file size of .npz is 94% of that mat
 """
-import profile
-
 import kaldi_io
 import lmdb
 import numpy as np
