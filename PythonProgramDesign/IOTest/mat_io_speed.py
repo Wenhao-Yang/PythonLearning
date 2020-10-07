@@ -217,8 +217,10 @@ if __name__ == '__main__':
     pick_point = []
     lmdb_point = []
     h5py_point = []
+    num_sam = np.array([100, 500, 1000,  2000,  5000, 10000, 20000, 50000])
+    sets = ['npz', 'npy', 'mat', 'kaldi_io', 'kaldiio', 'pickle', 'lmdb', 'h5py']
 
-    for num in [100, 500, 1000, 2000, 5000, 10000, 20000, 50000] :
+    for num in num_sam:
         kwds = {}
         utts = []
         print('\nRandomly generate array with lenght %d: ' % num)
@@ -294,32 +296,35 @@ if __name__ == '__main__':
     plt.figure(figsize=(12, 8))
     plt.title('Data IO')
 
-    npz_point = np.array(npz_point)
-    npy_point = np.array(npy_point)
-    mat_point = np.array(mat_point)
-    kaldi_io_point = np.array(kaldi_io_point)
-    kaldiio_point = np.array(kaldiio_point)
-    pick_point = np.array(pick_point)
-    lmdb_point = np.array(lmdb_point)
-    h5py_point = np.array(h5py_point)
+    all_lst = {}
+    all_lst['npz'] = np.array(npz_point)
+    all_lst['npy'] = np.array(npy_point)
+    all_lst['mat'] = np.array(mat_point)
+    all_lst['kaldi_io'] = np.array(kaldi_io_point)
+    all_lst['kaldiio'] = np.array(kaldiio_point)
+    all_lst['pickle'] = np.array(pick_point)
+    all_lst['lmdb'] = np.array(lmdb_point)
+    all_lst['h5py'] = np.array(h5py_point)
 
-    # t = np.array([t1, t2, t3, t4, t5, t6, t7, t8])
-    # t = t #/min(t)
-    # s = np.array([npzsize, npysize, matsize, kaldisize, kaldiiosize, picksize, lmdbsize, h5pysize])
-    # s = s #/min(s)
-    annote = ['npz', 'npys', 'mat', 'kaldi_io', 'kaldiio', 'pickle', 'lmdb', 'h5py']
-    # for i in range(len(t)):
-    #     plt.scatter(t[i], s[i])
-        # plt.text(t[i], s[i], annote[i])
+    # print(all_lst)
 
-    for points in npz_file,npy_point,mat_point,kaldi_io_point,kaldiio_point,pick_point,lmdb_point,h5py_point:
-        plt.plot(points[:,0], points[:,1])
+    plt.rc('font', family='Times New Roman')
+    plt.figure(figsize=(8, 6))
+    plt.title('Data IO With 100,500,1k,2k,5k,1w,2w,5w NumPy [x,64] Matrix', fontsize=16)
 
-    plt.xlabel('Time (s)')
-    plt.ylabel('Size (MB)')
-    plt.legend(annote)
-    plt.savefig("mat.io.png")
-    # plt.show()
+    for k in sets:
+        lst = np.array(all_lst[k])
+        plt.plot(lst[:, 0], lst[:, 1], marker='o')
+        # plt.plot(np.mean(lst[:, 0]/num_sam), np.mean(lst[:, 1]/num_sam), marker='o')
+
+    plt.legend(sets, fontsize=15)
+    plt.xlabel('Time (s)', fontsize=14)
+    plt.xticks(fontsize=14)
+    plt.ylabel('Size (MB)', fontsize=14)
+    plt.yticks(fontsize=14)
+
+    plt.savefig("PythonProgramDesign/IOTest/mat.io.all.png")
+    plt.show()
 
 
 
