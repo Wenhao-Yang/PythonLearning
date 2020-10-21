@@ -26,6 +26,7 @@ parser.add_argument('--use_benchmark', dest='use_benchmark', action='store_true'
 parser.add_argument('--exp_name', type=str, default='cudnn_test', help='output file name')
 args = parser.parse_args()
 
+np.random.seed(12345)
 if args.use_gpu and torch.cuda.is_available():
     device = torch.device('cuda')
     print('Using GPU: ', torch.cuda.get_device_name(0))
