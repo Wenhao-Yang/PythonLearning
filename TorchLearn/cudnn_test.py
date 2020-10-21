@@ -20,7 +20,7 @@ import numpy as np
 parser = argparse.ArgumentParser(description='Test for cudnn.benchmark')
 parser.add_argument('--run_num', type=int, default=100, help='number of runs')
 parser.add_argument('--batch_size', type=int, default=32, help='batch size')
-parser.add_argument('--random-batch', dest='use_gpu', action='store_true', default=False, help='use gpu')
+parser.add_argument('--random-batch', action='store_true', default=False, help='use gpu')
 parser.add_argument('--use_gpu', dest='use_gpu', action='store_true', default=False, help='use gpu')
 parser.add_argument('--use_benchmark', dest='use_benchmark', action='store_true', default=False, help='use benchmark')
 parser.add_argument('--exp_name', type=str, default='cudnn_test', help='output file name')
@@ -55,7 +55,10 @@ for itr in range(args.run_num):
     if args.random_batch:
         batch_size = np.random.randint(args.batch_size-10, args.batch_size+10)
         images = torch.randn(batch_size, 3, 224, 224)
+        labels = torch.empty(batch_size, dtype=torch.long).random_(1000)
+
         images = images.to(device)
+        labels = labels.to(device)
 
     start = time.time()
     outputs = model(images)
