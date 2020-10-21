@@ -26,7 +26,7 @@ parser.add_argument('--use_benchmark', dest='use_benchmark', action='store_true'
 parser.add_argument('--exp_name', type=str, default='cudnn_test', help='output file name')
 args = parser.parse_args()
 
-np.random.seed(12345)
+
 if args.use_gpu and torch.cuda.is_available():
     device = torch.device('cuda')
     print('Using GPU: ', torch.cuda.get_device_name(0))
@@ -48,35 +48,62 @@ model = model.to(device)
 images = images.to(device)
 labels = labels.to(device)
 
-time_list = []
-
-model.train()
-for itr in range(args.run_num):
-
-    if args.random_batch:
-        batch_size = np.random.randint(args.batch_size-10, args.batch_size+10)
-        images = torch.randn(batch_size, 3, 224, 224)
-        labels = torch.empty(batch_size, dtype=torch.long).random_(1000)
-
-        images = images.to(device)
-        labels = labels.to(device)
-
-    start = time.time()
-    outputs = model(images)
-    loss = criterion(outputs, labels)
-
-    optimizer.zero_grad()
-    loss.backward()
-    optimizer.step()
-
-    end = time.time()
-    print('iteration %d time: %.2f\r' % (itr, end-start), end='')
-    time_list.append(end-start)
-
 with open(args.exp_name, 'a') as f:
     f.write('Device: ' + device.type + '\n')
     f.write('Use CUDNN Benchmark: ' + str(torch.backends.cudnn.benchmark) + '\n')
     f.write('Number of runs: ' + str(args.run_num) + '\n')
     f.write('Batch size: ' + str(args.batch_size) + '\n')
     f.write('Random Batch size: ' + str(args.random_batch) + '\n')
-    f.write('Average time: %.2f s\n\n' % (np.mean(time_list)))
+    time_list = []
+
+    model.train()
+    np.random.seed(12345)
+    for itr in range(args.run_num):
+
+        if args.random_batch:
+            batch_size = np.random.randint(args.batch_size-10, args.batch_size+10)
+            images = torch.randn(batch_size, 3, 224, 224)
+            labels = torch.empty(batch_size, dtype=torch.long).random_(1000)
+
+            images = images.to(device)
+            labels = labels.to(device)
+
+        start = time.time()
+        outputs = model(images)
+        loss = criterion(outputs, labels)
+
+        optimizer.zero_grad()
+        loss.backward()
+        optimizer.step()
+
+        end = time.time()
+        print('iteration %d time: %.2f\r' % (itr, end-start), end='')
+        time_list.append(end-start)
+
+
+    f.write('Average train time: %.2f s\n\n' % (np.mean(time_list)))
+
+    time_list = []
+
+    model.eval()
+    np.random.seed(12345)
+    for itr in range(args.run_num):
+
+        if args.random_batch:
+            batch_size = np.random.randint(args.batch_size - 10, args.batch_size + 10)
+            images = torch.randn(batch_size, 3, 224, 224)
+            labels = torch.empty(batch_size, dtype=torch.long).random_(1000)
+
+            images = images.to(device)
+            labels = labels.to(device)
+
+        start = time.time()
+        outputs = model(images)
+
+        end = time.time()
+        print('iteration %d time: %.2f\r' % (itr, end - start), end='')
+        time_list.append(end - start)
+
+    f.write('Average eval time: %.2f s\n\n' % (np.mean(time_list)))
+
+
