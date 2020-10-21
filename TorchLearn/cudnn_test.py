@@ -60,7 +60,7 @@ for itr in range(args.run_num):
     optimizer.step()
 
     end = time.time()
-    print('iteration %d time: %.2f' % (itr, end-start))
+    print('iteration %d time: %.2f\r' % (itr, end-start), end='')
     time_list.append(end-start)
 
 with open(args.exp_name, 'a') as f:
