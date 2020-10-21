@@ -63,13 +63,9 @@ for itr in range(args.run_num):
     print('iteration %d time: %.2f' % (itr, end-start))
     time_list.append(end-start)
 
-with open(args.exp_name, 'w') as f:
+with open(args.exp_name, 'a') as f:
     f.write('Device: ' + device.type + '\n')
     f.write('Use CUDNN Benchmark: ' + str(torch.backends.cudnn.benchmark) + '\n')
     f.write('Number of runs: ' + str(args.run_num) + '\n')
     f.write('Batch size: ' + str(args.batch_size) + '\n')
     f.write('Average time: %.2f s\n\n' % (np.mean(time_list)))
-
-    for each in time_list:
-        f.write(str(each))
-        f.write('\n')
