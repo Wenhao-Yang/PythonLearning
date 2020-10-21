@@ -16,7 +16,7 @@ import wave
 
 # 读入音频。
 path = "/Users/yang/PycharmProjects/PythonLearning/LocalData"
-name = '00003.wav'
+name = '00001.wav'
 filename = os.path.join(path, name)
 
 # 打开语音文件。
@@ -40,14 +40,25 @@ print("file is closed!")
 print("plotting signal wave...")
 time = np.arange(0, nframes) * (1.0 / framerate)  # 计算时间
 time = np.reshape(time, [nframes, 1]).T
-plt.plot(time[0, :nframes], waveData[0, :nframes], c="b")
-plt.grid(axis="x", linestyle='--')
-plt.xlabel('\时间')
-plt.ylabel('强度')
 
+
+plt.figure(figsize=(6, 4))
+
+fig, ax = plt.subplots()
+part_frames = 12000
+plt.plot(time[0, :part_frames], waveData[0, 20000:(20000+part_frames)], c="black")
+# plt.grid(axis="x", linestyle='--')
+# plt.xlabel('\时间')
+# plt.ylabel('强度')
+# plt.axis('off')
+plt.xticks([])
+plt.yticks([])
+plt.axis('off')
 # set your ticks manually
 # plt.xaxis.set_ticks([1.,2.,3.,4.])
 
 # plt.title("Original wave")
 plt.show()
+fig.savefig('LocalData/00001.png', dpi=600, format='png')
+
 
